@@ -1,0 +1,157 @@
+
+/* Variables de colores */
+:root{
+    /* Dark Blue Colors */
+    --DarkBlue100: #609ED4;
+    --DarkBlue200: #356EA9;
+    --DarkBlue300: #0A3871;
+    --DarkBlue400: #072B61;
+    --DarkBlue500: #052051;
+
+    /* Light Blue Colors */
+
+    --LightBlue100: #F3F5FC;
+    --LightBlue200:#EFF1FA;
+    --LightBlue300: #E9ECF8;
+    --LightBlue400: #AAB2D5;
+    --LightBlue500: #757FB2;
+
+    /* Gray Colors */
+
+    --Gray100: #CED4DA;
+    --Gray200: #ADB5BD;
+    --Gray300: #868E96;
+    --Gray400: #495057;
+    --Gray500: #343A40;
+
+
+
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+/* Desktop design  */
+main{
+    background-color: var(--LightBlue100);
+    /* width: calc(1440px * 60 /100); */
+    /* height: calc(1024px * 60 / 100); */
+    width: 1440px;
+    height: 1024px;
+    padding: 40px;
+    margin: 30px auto;
+    display: flex;
+    position: relative;
+}
+
+.logo-container{
+    position: absolute;
+    top: 40px;
+    left: 84px;
+}
+/* seccion donde se va a ingresar el texto a encriptar */
+.mensaje{
+    width: calc(1440px - 400px);
+    height: 944px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mensaje input{
+    border: none;
+    color: var(--DarkBlue300);
+    font-weight: 400;
+    background-color: transparent;
+    width: 577px;
+    height: 48px;
+    font-size: 32px;
+    line-height: 48px;
+    margin-top: 128px;
+    margin-left: 200px;
+    outline: none;
+}
+
+.botones{
+    width: 680px;
+    margin-left: 200px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.botones small{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--Gray400);
+    opacity: .8;
+}
+.botones div{
+    display: flex;
+    gap: 24px;
+}
+
+.btn-encriptar{
+    width: 328px;
+    height: 67px;
+    background-color: var(--DarkBlue300);
+    border-radius: 24px;
+    color: white;
+    border: none;
+
+
+}
+.btn-desencriptar{
+    width: 328px;
+    height: 67px;
+    background-color: var(--LightBlue300);
+    border-radius: 24px;
+    color: var(--DarkBlue300);
+    border: 1px solid var(--DarkBlue300);
+}
+
+
+
+
+/* section donde se va a ver el mensaje encriptado o desencriptado */
+.resultado{
+    /* outline: 1px solid red; */
+    background-color: white;
+    /* width: calc(400px * 60 / 100); */
+    /* height: calc(944px * 60 / 100); */
+    width: 400px;
+    height: 944px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+}
+
+.resultado-container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+
+.resultado-container h3{
+    font-weight: 700;
+    color: var(--Gray500);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.resultado-container p{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.resultado img{
+    width: 336px;
+    height: 304px;
+}
