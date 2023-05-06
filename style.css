@@ -60,16 +60,27 @@ main{
 
 .mensaje input{
     border: none;
-    color: var(--DarkBlue300);
-    font-weight: 400;
     background-color: transparent;
     width: 577px;
     height: 48px;
-    font-size: 32px;
-    line-height: 48px;
     margin-top: 128px;
     margin-left: 200px;
     outline: none;
+    color: var(--DarkBlue300);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+input::placeholder{
+    color: var(--DarkBlue300);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+
+
+
+
 }
 
 .botones{
