@@ -62,7 +62,7 @@ main{
     border: none;
     background-color: transparent;
     width: 577px;
-    height: 48px;
+    height: 50%;
     margin-top: 128px;
     margin-left: 200px;
     outline: none;
@@ -70,16 +70,48 @@ main{
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
+    outline: 1px solid red;
+
 }
 
-input::placeholder{
+.mensaje input{
+    border: none;
+    background-color: transparent;
+    width: 577px;
+    height: 50%;
+    margin-top: 128px;
+    margin-left: 200px;
+    outline: none;
     color: var(--DarkBlue300);
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
+    outline: 1px solid red;
 
+}
 
+.mensaje textarea{
+    border: none;
+    background-color: transparent;
+    width: 577px;
+    height: 50%;
+    margin-top: 128px;
+    margin-left: 200px;
+    outline: none;
+    color: var(--DarkBlue300);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    resize: none;
 
+}
+
+textarea::placeholder{
+    color: var(--DarkBlue300);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    
 
 }
 
@@ -110,12 +142,14 @@ input::placeholder{
     border-radius: 24px;
     color: white;
     border: none;
+    font-size: 16px;
 
 
 }
 .btn-desencriptar{
     width: 328px;
     height: 67px;
+    font-size: 16px;
     background-color: var(--LightBlue300);
     border-radius: 24px;
     color: var(--DarkBlue300);
@@ -165,4 +199,35 @@ input::placeholder{
 .resultado img{
     width: 336px;
     height: 304px;
+}
+
+
+
+
+/* estilos de la sección que muestra el mensaje encriptado */
+.container-mensaje-encriptado{
+    height: 100%;
+    padding: 37px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--Gray400);
+}
+.btn-copiar{
+    width: 328px;
+    height: 67px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 24px;
+    color: var(--DarkBlue300);
+    border: 1px solid var(--DarkBlue300);
+}
+
+/* para esconer cuando el usuario de click a los botones */
+
+.esconder{
+    display: none;
 }
