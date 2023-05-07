@@ -14,24 +14,25 @@ const containerMensajeEncriptado = document.getElementById("container-mensaje-en
 const resultadoContainer = document.getElementById("resultado-container")
 const mensajeEncriptado = document.getElementById("mensajeEncriptado")
 
+const btnCopiar = document.getElementsByClassName("btn-copiar")[0]
 
-
-// escuchando eventos
 
 function mostrarMensajeEncriptado(){
-    
+        
     mensajeEncriptado.innerHTML = encriptarMensaje()
     mostrarSeccionEncriptada()
+
 
 }
 
 function mostrarSeccionEncriptada(){
-    containerMensajeEncriptado.classList.toggle("esconder")
-    resultadoContainer.classList.toggle("esconder")
+    resultadoContainer.classList.add("esconder")
+    containerMensajeEncriptado.classList.remove("esconder")
 }
 
 function encriptarMensaje(){
-    const mensaje = document.getElementById("textareaMensaje").value
+    const textarea = document.getElementById("textareaMensaje")
+    let mensaje = textarea.value
     let mensajeEncriptado = mensaje.split("").map(letra => {
         if (letra === "a"){
             letra = llavesEncriptacion.a
@@ -51,7 +52,7 @@ function encriptarMensaje(){
     }).join("")
 
 
-    // -----------  FORMA SIN USAR FUNCIONES DE JAVASCRIPT -------------------
+    // -----------  FORMA SIN USAR FUNCIONES NATIVAS DE JAVASCRIPT -------------------
     // for (const letra of mensaje) {
     //     if (letra === "a"){
     //         mensajeEncriptado = mensajeEncriptado + llavesEncriptacion.a
@@ -68,6 +69,8 @@ function encriptarMensaje(){
     //     }
   
     // }
+    textarea.value = ""
+    console.log("soy el mensaje del textarea", mensaje);
     return mensajeEncriptado
 }
 
@@ -84,7 +87,7 @@ function desencriptarMensaje (){
     mensajeDesencriptado = mensajeDesencriptado.replaceAll("enter", "e")
     mensajeDesencriptado = mensajeDesencriptado.replaceAll("imes", "i")
     mensajeDesencriptado = mensajeDesencriptado.replaceAll("ober", "o")
-    mensajeDesencriptado = mensajeDesencriptado.replaceAll("ufat", "u")
+    mensajeDesencriptado = mensajeDesencriptado.replaceAll("ufat", "u") 
     
 
 
@@ -93,10 +96,18 @@ function desencriptarMensaje (){
     return mensajeDesencriptado
 }
 
+function copiarMensaje(){
+    const parrafoMensajeEncriptado = document.getElementById("mensajeEncriptado")
+    //const mensajeACopiar = parrafoMensajeEncriptado.innerText
+    parrafoMensajeEncriptado.focus()
+    parrafoMensajeEncriptado.select()
+    document.execCommand("copy")
 
 
-
+    
+}
 encriptar.addEventListener("click", mostrarMensajeEncriptado)
 desencriptar.addEventListener("click", mostrarMensajeDesencriptado)
+btnCopiar.addEventListener("click", copiarMensaje)
 
 
