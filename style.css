@@ -146,6 +146,10 @@ textarea::placeholder{
 
 
 }
+
+.btn-encriptar:hover, .btn-desencriptar{
+    cursor: pointer;
+}
 .btn-desencriptar{
     width: 328px;
     height: 67px;

@@ -27,7 +27,7 @@
         </div>
         <section class="mensaje">
             
-            <textarea autofocus placeholder="Ingrese el texto aqui" rows="10"></textarea>
+            <textarea autofocus placeholder="Ingrese el texto aqui" id="textareaMensaje"></textarea>
 
             <footer class="botones">
                 <div>
@@ -46,8 +46,8 @@
                 </div>
                 
                 <div>
-                    <button class="btn-encriptar">Encriptar</button>
-                    <button class="btn-desencriptar">Desencriptar</button>
+                    <button class="btn-encriptar" id="encriptar">Encriptar</button>
+                    <button class="btn-desencriptar" id="desencriptar">Desencriptar</button>
                 </div>
             </footer>
         </section>
@@ -58,7 +58,7 @@
 
 
         <section class="resultado encriptado">
-            <div class="resultado-container ">
+            <div class="resultado-container " id="resultado-container">
                 <img src="./images/Muñeco.png" alt="" srcset="">
                 <div>
                     <h3 >Ningún mensaje fue encontrado</h3>
@@ -66,8 +66,8 @@
                 </div>
             </div>
 
-            <div class="container-mensaje-encriptado esconder">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, unde fuga corrupti laudantium rerum velit magnam accusantium vero culpa quisquam? Sint quaerat incidunt adipisci, fuga fugiat accusantium harum in unde?</p>
+            <div class="container-mensaje-encriptado esconder " id="container-mensaje-encriptado">
+                <p id="mensajeEncriptado">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, unde fuga corrupti laudantium rerum velit magnam accusantium vero culpa quisquam? Sint quaerat incidunt adipisci, fuga fugiat accusantium harum in unde?</p>
 
                 <button class="btn-copiar">Copiar</button>
 
@@ -76,6 +76,7 @@
         </section>
     </main>
 
+    <script src="./index.js"></script>
     
 </body>
 </html>
