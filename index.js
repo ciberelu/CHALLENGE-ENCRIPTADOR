@@ -43,6 +43,8 @@ function encriptarMensaje(){
     //valida si el mensaje contiene mayusuclas o acentos
     if (validarMayusculaAcentos(mensaje)){
         advertencia.style.color = "red"
+            advertencia.style.fontWeight = "bolder"
+
         return
         
     }
@@ -87,6 +89,7 @@ function encriptarMensaje(){
     textarea.value = ""
     textarea.focus()
     advertencia.style.color = "black"
+    advertencia.style.fontWeight = "normal"
     desencriptar.removeAttribute("disabled")
     mostrarSeccionEncriptada()
     return mensajeEncriptado
